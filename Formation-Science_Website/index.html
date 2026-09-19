@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Formation Science — Automation Systems for HVAC Contractors | Phoenix, AZ</title>
+<meta name="description" content="Formation Science builds Arizona HVAC companies a dedicated automation system that pulls every missed call, quote, and review back into the pipeline — tested, monitored, running 24/7. Free walkthrough. Phoenix, AZ.">
+<meta name="theme-color" content="#08050F">
+<link rel="canonical" href="https://formationscience.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://formationscience.com/">
+<meta property="og:title" content="Formation Science — Automation Systems for HVAC Contractors">
+<meta property="og:description" content="A dedicated automation system that pulls every missed call, quote, and review back into your pipeline — 24/7, monitored, live within a week.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
+
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Formation Science",
+  "description": "Business operation automation for HVAC contractors. Dedicated automation systems: missed-call text-back, quote follow-up, review requests, maintenance renewals, after-hours triage, and daily reporting.",
+  "url": "https://formationscience.com/",
+  "email": "hello@formationscience.com",
+  "telephone": "+1-480-560-8041",
+  "areaServed": { "@type": "City", "name": "Phoenix", "containedInPlace": { "@type": "State", "name": "Arizona" } },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4539 N 22nd St, Ste 7030",
+    "addressLocality": "Phoenix",
+    "addressRegion": "AZ",
+    "postalCode": "85016",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$$"
+}
+</script>
+
+<style>
+/* ============================================================
+   FORMATION SCIENCE — HVAC landing page, "gravity" concept
+   Dark, purple, single-theme by design (this variant does not
+   follow OS light mode — the black-hole aesthetic is the point).
+   Typography: Unbounded (display) / Manrope (body) / JetBrains
+   Mono (node labels, data, eyebrows).
+   ============================================================ */
+:root{
+  --void:#08050F;
+  --void-2:#0F0A1D;
+  --surface:#170F27;
+  --surface-2:#20172F;
+  --line:#2B2148;
+  --line-bright:#43316E;
+  --ink:#F3EEFF;
+  --ink-soft:#B6A7DA;
+  --ink-faint:#8779AC;
+  --accent:#8B5CF6;
+  --accent-2:#D946EF;
+  --accent-dim:#3C2670;
+  --on-accent:#0B0714;
+
+  --wrap:1360px;
+  --pad:clamp(1.15rem,5vw,2.5rem);
+  --radius:10px;
+
+  --ff-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
+  --ff-body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ff-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --s--1:.8rem; --s-0:1.03rem; --s-1:1.2rem; --s-2:1.5rem; --s-3:1.95rem;
+  --s-4:clamp(2rem,4.6vw,2.85rem); --s-5:clamp(2.5rem,6.8vw,4.4rem);
+
+  --glow-a: 0 0 46px -10px rgba(139,92,246,.65);
+  --glow-b: 0 0 46px -10px rgba(217,70,239,.55);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--void);
+  color:var(--ink);
+  font-family:var(--ff-body);
+  font-size:var(--s-0);
+  line-height:1.63;
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--ff-display);font-weight:800;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:2.5px solid var(--accent-2);outline-offset:3px;border-radius:3px}
+::selection{background:var(--accent);color:var(--on-accent)}
+
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad);position:relative;z-index:1}
+.eyebrow{
+  font-family:var(--ff-mono);font-size:var(--s--1);font-weight:500;
+  text-transform:uppercase;letter-spacing:.18em;color:var(--ink-faint)
+}
+.skip{
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;
+  background:var(--accent);color:var(--on-accent);font-weight:700
+}
+.skip:focus{
+  position:fixed;top:0;left:0;z-index:400;width:auto;height:auto;
+  clip:auto;clip-path:none;padding:.7em 1.1em;border-radius:0 0 var(--radius) 0
+}
+
+/* ---------- ambient background: starfield + nebula glow ---------- */
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none}
+.ambient .stars{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(1.6px 1.6px at 40px 60px, rgba(243,238,255,.9), transparent),
+    radial-gradient(1.2px 1.2px at 180px 140px, rgba(243,238,255,.55), transparent),
+    radial-gradient(1.6px 1.6px at 90px 220px, rgba(243,238,255,.7), transparent),
+    radial-gradient(1.2px 1.2px at 260px 70px, rgba(243,238,255,.45), transparent),
+    radial-gradient(1.6px 1.6px at 320px 260px, rgba(243,238,255,.8), transparent),
+    radial-gradient(1.2px 1.2px at 150px 320px, rgba(243,238,255,.5), transparent);
+  background-repeat:repeat;
+  background-size:360px 340px;
+  opacity:.6;
+}
+.ambient .stars.far{
+  background-size:520px 480px;
+  opacity:.35;
+  filter:blur(.2px);
+}
+.ambient .nebula{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(60% 46% at 78% 8%, rgba(139,92,246,.20), transparent 60%),
+    radial-gradient(50% 38% at 8% 46%, rgba(217,70,239,.13), transparent 60%);
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  --_bg:transparent;--_fg:var(--ink);--_bd:var(--line-bright);
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font-family:var(--ff-display);font-weight:700;font-size:.92rem;letter-spacing:-.005em;
+  padding:.95em 1.5em;border:1.5px solid var(--_bd);border-radius:999px;
+  background:var(--_bg);color:var(--_fg);cursor:pointer;text-decoration:none;
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease;
+  white-space:nowrap
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--primary{
+  --_bg:linear-gradient(135deg,var(--accent),var(--accent-2));
+  --_fg:var(--on-accent);--_bd:transparent;
+  box-shadow:0 0 0 1px rgba(139,92,246,.35), var(--glow-a);
+}
+.btn--primary:hover{box-shadow:0 0 0 1px rgba(217,70,239,.5), var(--glow-b);}
+.btn--ghost{--_bg:rgba(255,255,255,.02);--_fg:var(--ink);--_bd:var(--line-bright)}
+.btn--ghost:hover{--_bd:var(--accent);color:var(--ink)}
+.btn--mono{font-family:var(--ff-mono);font-weight:500;font-size:.88rem;--_bd:var(--line-bright);border-radius:8px}
+.btn--mono:hover{--_bd:var(--accent);color:var(--accent-2)}
+.btn--sm{padding:.62em 1.1em;font-size:.85rem}
+.btn--block{width:100%}
+
+/* ---------- header ---------- */
+.site-head{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb,var(--void) 78%,transparent);
+  backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid transparent;transition:border-color .2s ease,background .2s ease
+}
+.site-head.is-stuck{border-bottom-color:var(--line)}
+.head-inner{display:flex;align-items:center;gap:1.5rem;height:68px}
+.logo{display:inline-flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink);font-family:var(--ff-display);font-weight:800;letter-spacing:-.01em;font-size:1.02rem}
+.logo svg{width:28px;height:auto;color:var(--ink);flex:none;filter:drop-shadow(0 0 8px rgba(139,92,246,.7))}
+.logo__sci{color:var(--ink-faint);margin-left:.32ch;font-weight:600}
+.head-nav{display:none;gap:1.7rem;margin-left:auto;font-size:.9rem;font-weight:500}
+.head-nav a{position:relative;text-decoration:none;color:var(--ink-soft);padding-bottom:.3rem;transition:color .2s ease}
+.head-nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  transition:right .32s cubic-bezier(.22,.8,.2,1);
+}
+.head-nav a:hover{color:var(--ink)}
+.head-nav a:hover::after{right:0}
+.head-nav a.is-active{color:var(--ink)}
+.head-nav a.is-active::after{right:0}
+.head-actions{margin-left:auto}
+@media (min-width:940px){.head-nav{display:flex}.head-actions{margin-left:0}}
+
+/* ---------- section rhythm ---------- */
+.section{border-top:1px solid var(--line);padding-block:clamp(3.6rem,9vw,6.5rem);scroll-margin-top:84px}
+.section__head{margin-bottom:2.6rem}
+.section__head h2{font-size:var(--s-4);margin-top:.55rem;max-width:22ch}
+.section__head p{color:var(--ink-soft);margin-top:1rem;max-width:56ch}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(2.8rem,7vw,4.8rem);overflow:hidden}
+.hero-grid{display:grid;gap:clamp(2.4rem,6vw,3.5rem)}
+.hero h1{font-size:var(--s-5);margin:1rem 0 0}
+.hero h1 .grad{background:linear-gradient(100deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:clamp(1.05rem,1.9vw,1.22rem);color:var(--ink-soft);margin-top:1.2rem;max-width:46ch}
+.hero .lede strong{color:var(--ink);font-weight:700}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.hero-note{font-family:var(--ff-mono);font-size:var(--s--1);color:var(--ink-faint);margin-top:1.2rem;max-width:50ch;line-height:1.7}
+@media (min-width:960px){.hero-grid{grid-template-columns:1fr 1.2fr;align-items:center}}
+
+/* hero orbital diagram */
+.orbit-wrap{position:relative;aspect-ratio:620/560;filter:drop-shadow(0 0 60px rgba(139,92,246,.18))}
+.orbit-wrap svg{width:100%;height:100%;overflow:visible}
+.node-chip rect{fill:var(--surface);stroke:var(--line-bright);stroke-width:1.4}
+.node-chip text{fill:var(--ink-soft);font-family:var(--ff-mono);font-size:11px;letter-spacing:.03em}
+.node-chip .port{fill:var(--void);stroke:var(--accent);stroke-width:2}
+.orbit-path{fill:none;stroke:url(#pathGrad);stroke-width:1.6;opacity:.55}
+.core-ring{fill:none;stroke:var(--line-bright);stroke-width:1.2;opacity:.8}
+.core-glow{fill:url(#coreGrad)}
+.core-label{fill:var(--ink);font-family:var(--ff-display);font-weight:800;font-size:15px}
+.core-sub{fill:var(--ink-faint);font-family:var(--ff-mono);font-size:9px;letter-spacing:.12em}
+.pulse{fill:var(--accent-2)}
+@media (prefers-reduced-motion:reduce){.pulse-layer{display:none}}
+
+/* ---------- trust strip ---------- */
+.strip{border-top:1px solid var(--line);background:var(--void-2)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;padding-block:1.1rem;font-family:var(--ff-mono);font-size:var(--s--1);color:var(--ink-soft)}
+.strip b{color:var(--ink);font-weight:600}
+
+/* ---------- pain list ---------- */
+.pain-list{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.pain-list li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.2rem clamp(1rem,3vw,1.6rem);font-size:1.03rem;color:var(--ink);align-items:start}
+.pain-list li + li{border-top:1px solid var(--line)}
+.pain-list .drop{flex:none;width:26px;height:26px;margin-top:.1rem}
+.glow-red{color:#FF6B6B;font-weight:600;text-shadow:0 0 10px rgba(255,77,77,.75),0 0 22px rgba(255,77,77,.35)}
+.glow-purple{color:#C4A6FF;text-shadow:0 0 8px rgba(139,92,246,.55),0 0 16px rgba(139,92,246,.3)}
+
+/* ---------- automate chain: nodes strung together on a rope ----------
+   Desktop/tablet: a 2-row "snake" - node1->2->3->4 left to right, then a
+   return connector drops down and carries the line back to the left edge
+   so row 2 (5->6->7->8) also reads left to right, like a carriage return.
+   Mobile: falls back to one straight vertical chain (set below 980px).
+
+   All 7 connectors (3 in row 1, the return, 3 in row 2) share ONE 5.6s
+   cycle and are woken up in turn via animation-delay = their position *
+   0.8s. Because every connector uses the identical keyframes and duration,
+   that phase offset repeats forever - at any moment only one gap has a
+   visibly moving light, and it always advances 1->2->3->4->(return)->5->6->7->8,
+   never resyncing into a simultaneous blink like naive staggering would. */
+.auto-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:640px;margin-inline:auto}
+.auto-card{
+  position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.5rem clamp(1.1rem,2.6vw,1.6rem);transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease
+}
+.auto-card:hover{border-color:var(--accent);box-shadow:var(--glow-a);transform:translateY(-3px)}
+.auto-card::before,.auto-card::after{
+  content:"";position:absolute;left:50%;width:9px;height:9px;border-radius:50%;
+  background:var(--void);border:2px solid var(--line-bright);transform:translateX(-50%);
+  transition:border-color .16s ease;z-index:1
+}
+.auto-card::before{top:-5px}
+.auto-card::after{bottom:-5px}
+.auto-card:hover::before,.auto-card:hover::after{border-color:var(--accent-2)}
+.auto-card .idx{font-family:var(--ff-mono);font-size:.72rem;color:var(--accent-2);display:block;margin-bottom:.7rem;letter-spacing:.12em}
+.auto-card h3{font-size:1.05rem;font-weight:700;letter-spacing:-.005em;font-family:var(--ff-display)}
+.auto-card p{font-size:.94rem;color:var(--ink-soft);margin-top:.55rem}
+
+/* the rope: a twisted-cable segment strung between each pair of nodes, with
+   a small light relaying down it in turn so the chain reads as live data,
+   not a static wire */
+.node-rope{width:8px;height:2.6rem;margin:0 auto;position:relative}
+.node-rope::before{
+  content:"";position:absolute;inset:0;border-radius:5px;
+  background:repeating-linear-gradient(45deg,var(--accent) 0 4px,var(--accent-2) 4px 8px);
+  opacity:.8;
+}
+.node-rope::after{
+  content:"";position:absolute;left:50%;top:-4px;width:10px;height:10px;margin-left:-5px;
+  border-radius:50%;background:var(--ink);box-shadow:0 0 12px 3px rgba(139,92,246,.85);
+  animation:ropeTravelV 5.6s linear infinite;animation-delay:var(--rope-delay,0s);
+}
+@keyframes ropeTravelV{
+  0%,14.28%{opacity:0;top:-4px}
+  2%,12%{opacity:1}
+  13%{top:calc(100% - 6px)}
+  14.5%,100%{opacity:0}
+}
+@keyframes ropeTravelH{
+  0%,14.28%{opacity:0;left:-4px;top:50%}
+  2%,12%{opacity:1}
+  13%{left:calc(100% - 6px);top:50%}
+  14.5%,100%{opacity:0}
+}
+
+/* the return connector: the one link that carries the line from the end of
+   row 1 back to the start of row 2, instead of a plain node-to-node rope.
+   Built from three plain CSS boxes (drop / bar / drop) rather than one SVG
+   path stretched with preserveAspectRatio="none" - that non-uniform scaling
+   is what made the earlier version look stretched (a 100x34 viewBox forced
+   into a ~1080x44 box scales x and y by very different factors, so curves
+   and stroke-width warp). Plain boxes at fixed pixel widths never distort
+   regardless of how wide the row gets. */
+.rope-return{grid-column:1/-1;position:relative;height:44px;margin-block:.15rem}
+.rope-return-seg{position:absolute;background:var(--accent-2);opacity:.75;border-radius:3px}
+.rope-return-seg--drop-r{top:0;right:14px;width:4px;height:50%}
+.rope-return-seg--bar{top:calc(50% - 2px);left:14px;right:14px;height:4px}
+.rope-return-seg--drop-l{bottom:0;left:14px;width:4px;height:50%}
+.rope-return-port{
+  position:absolute;width:9px;height:9px;border-radius:50%;
+  background:var(--void);border:2px solid var(--line-bright)
+}
+.rope-return-port--tr{top:0;right:14px;transform:translate(50%,-50%)}
+.rope-return-port--bl{bottom:0;left:14px;transform:translate(-50%,50%)}
+.rope-return-pulse{
+  position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ink);
+  box-shadow:0 0 12px 3px rgba(217,70,239,.85);transform:translate(-50%,-50%);
+  top:0;left:calc(100% - 14px);animation:ropeTravelReturn 5.6s linear infinite;animation-delay:2.4s
+}
+@keyframes ropeTravelReturn{
+  0%,42.8%{opacity:0;top:0;left:calc(100% - 14px)}
+  44%{opacity:1;top:0;left:calc(100% - 14px)}
+  48%{top:50%;left:calc(100% - 14px)}
+  52%{top:50%;left:14px}
+  56%{opacity:1;top:100%;left:14px}
+  57.2%,100%{opacity:0}
+}
+.node-rope--mobile{display:none}
+
+@media (prefers-reduced-motion:reduce){
+  .node-rope::after,.rope-return-pulse{animation:none;opacity:1}
+  .node-rope::after{top:calc(50% - 5px)}
+  .rope-return-pulse{top:50%;left:calc(100% - 14px)}
+}
+
+/* >=980px: the 2-row snake layout - 4 cards + 3 ropes per row (7 tracks),
+   with the return connector spanning the full width between the two rows */
+@media (min-width:980px){
+  .auto-grid{
+    max-width:none;
+    grid-template-columns:1fr 2.2rem 1fr 2.2rem 1fr 2.2rem 1fr;
+    align-items:center;
+  }
+  .auto-card::before{top:50%;left:-5px;transform:translateY(-50%)}
+  .auto-card::after{bottom:auto;top:50%;left:auto;right:-5px;transform:translateY(-50%)}
+  .auto-card:first-of-type::before,
+  .auto-card:nth-of-type(5)::before{display:none}
+  .auto-card:nth-of-type(4)::after,
+  .auto-card:last-of-type::after{display:none}
+  .node-rope{width:100%;height:8px;align-self:center}
+  .node-rope::after{animation-name:ropeTravelH}
+  .node-rope--mobile{display:none!important}
+}
+@media (max-width:979px){
+  .rope-return-seg,.rope-return-port,.rope-return-pulse{display:none}
+  .rope-return{height:auto;grid-column:auto}
+  .node-rope--mobile{display:block}
+}
+
+/* ---------- how it works: flowchart ---------- */
+.flow{display:grid;gap:0}
+.flow-node{
+  display:grid;grid-template-columns:auto 1fr;gap:1.2rem 1.4rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.5rem clamp(1.1rem,3vw,1.7rem);position:relative
+}
+.flow-connector{
+  width:2px;height:2.2rem;margin-inline:1.9rem;
+  background:linear-gradient(var(--accent),var(--accent-2));opacity:.6;position:relative
+}
+.flow-connector::after{
+  content:"";position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);
+  width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 12px 2px rgba(217,70,239,.7)
+}
+.flow-node__n{
+  font-family:var(--ff-mono);font-size:.95rem;font-weight:600;color:var(--void);
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  border-radius:10px;width:2.6rem;height:2.6rem;display:grid;place-items:center;flex:none
+}
+.flow-node h3{font-size:1.18rem;font-weight:700}
+.flow-node p{color:var(--ink-soft);margin-top:.5rem;max-width:62ch}
+.flow-node .same-day{display:block;margin-top:.6rem}
+
+/* ---------- assurance ---------- */
+.assure{display:grid;gap:2.2rem}
+.assure-list{display:grid;gap:1.1rem}
+.assure-list li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:.9rem;color:var(--ink);font-size:1.02rem}
+.assure-list .tick{color:var(--accent-2);font-family:var(--ff-mono);font-weight:600;flex:none}
+.assure-note{
+  border-left:2px solid var(--accent);padding:.3rem 0 .3rem 1.2rem;
+  color:var(--ink-soft);font-size:1rem;max-width:62ch
+}
+.assure-note b{color:var(--ink);font-weight:600}
+@media (min-width:860px){.assure{grid-template-columns:1fr 1fr;gap:3.2rem;align-items:start}}
+
+/* ---------- guarantees ---------- */
+.guar-grid{display:grid;gap:1.1rem}
+.guar{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem clamp(1.1rem,2.6vw,1.6rem)}
+.guar h3{font-size:1.02rem;font-weight:700;display:flex;gap:.6rem;align-items:baseline;font-family:var(--ff-display)}
+.guar h3 .g{font-family:var(--ff-mono);font-size:.76rem;color:var(--accent-2)}
+.guar p{font-size:.93rem;color:var(--ink-soft);margin-top:.5rem}
+@media (min-width:680px){.guar-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.guar-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- founders ---------- */
+.founders{
+  position:relative;border:1.5px solid var(--accent-2);border-radius:18px;
+  background:linear-gradient(160deg, rgba(217,70,239,.08), var(--surface) 55%);
+  padding:clamp(1.6rem,4vw,2.6rem);overflow:hidden;box-shadow:var(--glow-b)
+}
+.founders .eyebrow{color:var(--accent-2)}
+.founders h2{font-size:var(--s-3);margin-top:.5rem}
+.founders p{color:var(--ink-soft);margin-top:.9rem;max-width:60ch}
+.founders p strong,.founders li strong{color:var(--accent-2);text-shadow:0 0 12px rgba(217,70,239,.55)}
+.founders ul{margin:1.2rem 0 0;padding:0;display:grid;gap:.6rem}
+.founders li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:.8rem;font-size:.98rem}
+.founders li .p{color:var(--accent-2);font-family:var(--ff-mono);font-weight:600;flex:none}
+.founders .why{margin-top:1.3rem;font-size:.92rem;color:var(--ink-soft);font-style:italic}
+
+/* ---------- fit / qualify ---------- */
+.fit{display:grid;gap:1.5rem}
+.fit-col{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:1.6rem}
+.fit-col h3{font-family:var(--ff-mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.fit-col.yes h3{color:var(--accent-2)}
+.fit-col.no h3{color:var(--ink-faint)}
+.fit-col ul{margin:1rem 0 0;padding:0;display:grid;gap:.7rem}
+.fit-col li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:.7rem;font-size:.97rem;color:var(--ink)}
+.fit-col.no li{color:var(--ink-soft)}
+.fit-col .m{font-family:var(--ff-mono);font-weight:600;flex:none}
+.fit-col.yes .m{color:var(--accent-2)}
+.fit-col.no .m{color:var(--ink-faint)}
+.fit-cta{font-size:1.05rem;font-weight:600;font-family:var(--ff-display)}
+@media (min-width:800px){.fit{grid-template-columns:1fr 1fr}}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;gap:2.4rem}
+.form{display:grid;gap:1rem}
+.field{display:grid;gap:.4rem}
+.field label{font-family:var(--ff-mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.field input,.field select,.field textarea{
+  font-family:var(--ff-body);font-size:1rem;color:var(--ink);
+  background:var(--surface);border:1.5px solid var(--line-bright);border-radius:var(--radius);
+  padding:.75em .85em;width:100%;transition:border-color .14s ease,box-shadow .14s ease
+}
+.field textarea{resize:vertical;min-height:140px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(139,92,246,.2)}
+.field-row{display:grid;gap:1rem}
+.consent-label{display:flex;align-items:flex-start;gap:.7rem;cursor:pointer;font-size:.86rem;color:var(--ink-soft);line-height:1.5}
+.consent-label input[type="checkbox"]{width:18px;height:18px;flex:none;margin-top:.2em;accent-color:var(--accent);cursor:pointer}
+@media (min-width:560px){.field-row{grid-template-columns:1fr 1fr}}
+.hp{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;opacity:0;pointer-events:none}
+.form-status{font-family:var(--ff-mono);font-size:.86rem;min-height:1.2em;color:var(--ink-soft)}
+.form-status.err{color:var(--accent-2)}
+.form-done{
+  border:1.5px solid var(--accent);border-radius:var(--radius);
+  background:linear-gradient(160deg, rgba(139,92,246,.1), var(--surface) 55%);padding:1.5rem
+}
+.form-done h3{font-size:1.15rem;font-family:var(--ff-display)}
+.form-done p{color:var(--ink-soft);margin-top:.6rem;font-size:.96rem}
+
+.contact-side{display:grid;gap:1.3rem;align-content:start}
+.contact-side h3{font-size:1.05rem;font-weight:700;font-family:var(--ff-display)}
+.contact-line{display:grid;gap:.15rem;font-family:var(--ff-mono);font-size:.92rem}
+.contact-line > span{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint)}
+.contact-line a{color:var(--ink);text-decoration:none}
+.contact-line a:hover{color:var(--accent-2)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+address{font-style:normal;font-family:var(--ff-mono);font-size:.88rem;color:var(--ink-soft);line-height:1.7}
+.same-day{font-family:var(--ff-mono);font-size:.8rem;color:var(--ink-faint)}
+@media (min-width:900px){.contact-grid{grid-template-columns:1.15fr .85fr;gap:3.5rem}}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.faq details{background:var(--surface)}
+.faq details + details{border-top:1px solid var(--line)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.2rem clamp(1rem,3vw,1.6rem);
+  font-family:var(--ff-display);font-weight:600;font-size:1rem;
+  display:flex;justify-content:space-between;gap:1rem;align-items:center
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{font-family:var(--ff-mono);color:var(--accent-2);transition:transform .2s ease;flex:none}
+.faq details[open] summary .chev{transform:rotate(45deg)}
+.faq .faq-body{padding:0 clamp(1rem,3vw,1.6rem) 1.3rem;color:var(--ink-soft);font-size:.97rem;max-width:64ch}
+
+/* ---------- footer ---------- */
+.site-foot{border-top:1px solid var(--line);padding-block:2.6rem 6rem;font-size:.9rem}
+.foot-grid{display:grid;gap:1.8rem}
+.foot-brand{display:grid;gap:.7rem;max-width:34ch}
+.foot-brand .logo{font-size:1rem}
+.foot-brand p{color:var(--ink-soft);font-size:.88rem}
+.foot-nav{display:flex;flex-wrap:wrap;gap:1.2rem;font-family:var(--ff-mono);font-size:.82rem}
+.foot-nav a{color:var(--ink-soft);text-decoration:none}
+.foot-nav a:hover{color:var(--accent-2)}
+.foot-legal{color:var(--ink-faint);font-family:var(--ff-mono);font-size:.76rem;border-top:1px solid var(--line);padding-top:1.4rem;margin-top:.6rem}
+@media (min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr;align-items:start}}
+
+/* ---------- sticky mobile action bar ---------- */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:1px;
+  background:var(--line);border-top:1px solid var(--line-bright);
+  padding-bottom:env(safe-area-inset-bottom)
+}
+.mobile-bar a{
+  background:var(--void-2);color:var(--ink);text-decoration:none;
+  font-family:var(--ff-display);font-weight:700;font-size:.84rem;
+  padding:.95rem .5rem;text-align:center
+}
+.mobile-bar a.cta{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:var(--on-accent)}
+@media (min-width:760px){.mobile-bar{display:none}}
+@media (max-width:759px){body{padding-bottom:56px}}
+
+/* ---------- very narrow (folded Galaxy Fold, small phones) ---------- */
+@media (max-width:479px){
+  .head-actions{display:none} /* CTA lives in the sticky bottom bar here */
+  .logo{font-size:.95rem}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%}
+  .founders .hero-cta .btn{width:100%}
+}
+
+/* ---------- reveal ---------- *
+   Fully visible by default; .in replays a one-time entrance animation.
+   No hidden default state, so a slow/blocked script never leaves a blank
+   frame - it just skips the animation and the content is already there. */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .reveal.in{animation:rise .65s cubic-bezier(.2,.6,.2,1) both}
+}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true">
+  <div class="nebula"></div>
+  <div class="stars far"></div>
+  <div class="stars"></div>
+</div>
+
+<a class="skip" href="#contact">Skip to contact</a>
+
+<header class="site-head" id="top">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="Formation Science — home">
+      <svg viewBox="0 0 250 152" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="15" stroke-linecap="round">
+        <path d="M7 16 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 232 16"/>
+        <path d="M7 40 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 232 40"/>
+        <path d="M7 64 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 150 64"/>
+        <path d="M7 88 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 150 88"/>
+        <path d="M7 112 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 74 112"/>
+        <path d="M7 136 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 74 136"/>
+      </g></svg>
+      <span>Formation<span class="logo__sci">Science</span></span>
+    </a>
+    <nav class="head-nav" aria-label="Primary">
+      <a href="#automate">Automations</a>
+      <a href="#how">How it works</a>
+      <a href="#guarantees">Guarantees</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn--primary btn--sm" href="#contact">Free walkthrough</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Automated systems for HVAC companies · Phoenix, Arizona</p>
+        <h1>Every missed call is revenue leaving <span class="grad">your orbit.</span></h1>
+        <p class="lede">Pull every missed call, quote, and review back into your pipeline — tested, monitored, and running 24/7. <strong>Your first automation can go live within a week.</strong></p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="#contact">Get a free walkthrough</a>
+          <a class="btn btn--mono" href="tel:+14805608041">Call (480)&nbsp;560-8041</a>
+          <a class="btn btn--mono" href="sms:+14805608041">Text us</a>
+        </div>
+        <p class="hero-note">15 minutes. No pitch deck. We map the busywork eating your team's day and tell you what we'd automate first.</p>
+      </div>
+
+      <div class="orbit-wrap" role="img" aria-label="Diagram: missed calls, quote follow-up, review requests, after-hours triage, and daily reports all flowing into one central automation system">
+        <svg viewBox="0 0 620 560" fill="none">
+          <defs>
+            <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F3EEFF"/>
+              <stop offset="35%" stop-color="#8B5CF6"/>
+              <stop offset="100%" stop-color="#D946EF" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".15"/>
+              <stop offset="100%" stop-color="#D946EF" stop-opacity=".8"/>
+            </linearGradient>
+          </defs>
+
+          <!-- connectors (spacetime curves between the core and each node).
+               p1/p2/p3/p5 are drawn core->node on purpose (outbound automations:
+               a text, a follow-up, a review ask, a report all go OUT from the
+               system). p4 (after-hours triage) stays node->core: it's routing
+               an INCOMING emergency call, so its pulse still flows inward. -->
+          <g class="connectors">
+            <path id="p1" class="orbit-path" d="M388 262 Q300 150 150 108"/>
+            <path id="p2" class="orbit-path" d="M388 292 Q280 262 118 246"/>
+            <path id="p3" class="orbit-path" d="M392 322 Q290 366 138 392"/>
+            <path id="p4" class="orbit-path" d="M232 494 Q330 430 402 352"/>
+            <path id="p5" class="orbit-path" d="M404 244 Q392 170 372 100"/>
+          </g>
+
+          <!-- traveling pulses -->
+          <g class="pulse-layer">
+            <circle class="pulse" r="3.4"><animateMotion dur="3.1s" repeatCount="indefinite" rotate="auto"><mpath href="#p1"/></animateMotion></circle>
+            <circle class="pulse" r="3.4"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto" begin="0.4s"><mpath href="#p2"/></animateMotion></circle>
+            <circle class="pulse" r="3.4"><animateMotion dur="3.4s" repeatCount="indefinite" rotate="auto" begin="0.9s"><mpath href="#p3"/></animateMotion></circle>
+            <circle class="pulse" r="3.4"><animateMotion dur="2.8s" repeatCount="indefinite" rotate="auto" begin="1.3s"><mpath href="#p4"/></animateMotion></circle>
+            <circle class="pulse" r="3.4"><animateMotion dur="3.6s" repeatCount="indefinite" rotate="auto" begin="0.2s"><mpath href="#p5"/></animateMotion></circle>
+          </g>
+
+          <!-- core -->
+          <circle class="core-glow" cx="430" cy="300" r="76" opacity=".9"/>
+          <circle class="core-ring" cx="430" cy="300" r="92"/>
+          <circle class="core-ring" cx="430" cy="300" r="108" opacity=".4"/>
+          <text class="core-label" x="430" y="296" text-anchor="middle">FORMATION</text>
+          <text class="core-sub" x="430" y="314" text-anchor="middle">CORE SYSTEM · 24/7</text>
+
+          <!-- satellite nodes -->
+          <g class="node-chip">
+            <rect x="30" y="82" width="128" height="42" rx="10"/>
+            <circle class="port" cx="158" cy="103" r="4"/>
+            <text x="94" y="98" text-anchor="middle">MISSED CALL</text>
+            <text x="94" y="112" text-anchor="middle" opacity=".6">TEXT-BACK</text>
+          </g>
+          <g class="node-chip">
+            <rect x="2" y="222" width="128" height="42" rx="10"/>
+            <circle class="port" cx="130" cy="243" r="4"/>
+            <text x="66" y="238" text-anchor="middle">QUOTE</text>
+            <text x="66" y="252" text-anchor="middle" opacity=".6">FOLLOW-UP</text>
+          </g>
+          <g class="node-chip">
+            <rect x="12" y="368" width="128" height="42" rx="10"/>
+            <circle class="port" cx="140" cy="389" r="4"/>
+            <text x="76" y="384" text-anchor="middle">REVIEW</text>
+            <text x="76" y="398" text-anchor="middle" opacity=".6">REQUESTS</text>
+          </g>
+          <g class="node-chip">
+            <rect x="118" y="472" width="128" height="42" rx="10"/>
+            <circle class="port" cx="246" cy="493" r="4"/>
+            <text x="182" y="488" text-anchor="middle">AFTER-HOURS</text>
+            <text x="182" y="502" text-anchor="middle" opacity=".6">TRIAGE</text>
+          </g>
+          <g class="node-chip">
+            <rect x="286" y="52" width="128" height="42" rx="10"/>
+            <circle class="port" cx="372" cy="94" r="4"/>
+            <text x="350" y="68" text-anchor="middle">DAILY</text>
+            <text x="350" y="82" text-anchor="middle" opacity=".6">KPI REPORT</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span>Built in Phoenix, AZ</span>
+      <span>One <b>dedicated</b> server per client</span>
+      <span>Human-reviewed QC before anything goes live</span>
+      <span><b>Cancel</b> the monthly anytime</span>
+    </div>
+  </div>
+
+  <!-- PAIN -->
+  <section class="section" id="pain">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">The problem</p>
+        <h2>Sound familiar?</h2>
+        <p>You're not losing jobs because your techs aren't good. You're losing them in the gaps — the call nobody caught, the quote nobody chased, the positive review ask that was forgotten.</p>
+      </div>
+      <ul class="pain-list reveal">
+        <li><svg class="drop" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.4 L21.6 19.6 H2.4 Z" stroke="#FF6B6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 9.6v4.4" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.15" fill="#FF6B6B"/></svg><span>The phone rings while every tech is under a condenser. It goes to voicemail. <span class="glow-red">They call the next company on the list.</span></span></li>
+        <li><svg class="drop" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.4 L21.6 19.6 H2.4 Z" stroke="#FF6B6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 9.6v4.4" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.15" fill="#FF6B6B"/></svg><span>You sent a $9,000 estimate last week. <span class="glow-red">Nobody followed up.</span> You'll never know if you lost it on price or on silence.</span></li>
+        <li><svg class="drop" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.4 L21.6 19.6 H2.4 Z" stroke="#FF6B6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 9.6v4.4" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.15" fill="#FF6B6B"/></svg><span>Your best tech does spotless work and <span class="glow-red">never remembers to ask for the Google review.</span></span></li>
+        <li><svg class="drop" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.4 L21.6 19.6 H2.4 Z" stroke="#FF6B6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 9.6v4.4" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.15" fill="#FF6B6B"/></svg><span>It's 9 PM. Is that caller a no-cooling emergency or a "sometime next week" — and <span class="glow-red">who's deciding at that hour?</span></span></li>
+        <li><svg class="drop" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.4 L21.6 19.6 H2.4 Z" stroke="#FF6B6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 9.6v4.4" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.15" fill="#FF6B6B"/></svg><span>You want today's booked revenue without building another spreadsheet or pulling someone off the schedule board.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AUTOMATE -->
+  <section class="section" id="automate">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">The system</p>
+        <h2>Eight nodes. One pipeline.</h2>
+        <p>Every piece is built custom for your business, tested with real sample data, and reviewed by real people before it ever touches your operations. Start with five; add one more every month.</p>
+      </div>
+      <div class="auto-grid reveal">
+        <article class="auto-card"><span class="idx">NODE 01</span><h3>Missed-Call Text-Back</h3><p>Any unanswered calls get an instant branded text, so the lead stays with you instead of dialing the next shop.</p></article>
+        <div class="node-rope" style="--rope-delay:0s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 02</span><h3>Quote Follow-Up Sequence</h3><p>Text-&amp;-email cadence after every estimate, with a nudge to your salesperson if the customer goes quiet.</p></article>
+        <div class="node-rope" style="--rope-delay:.8s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 03</span><h3>Maintenance Plan Renewals</h3><p>Seasonal tune-up and membership renewal reminders fire on the service-history date — no one has to remember.</p></article>
+        <div class="node-rope" style="--rope-delay:1.6s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 04</span><h3>Review Request + Reputation Gate</h3><p>Auto-ask for a review when the invoice is paid. Unhappy customers route privately to the owner, not to Google.</p></article>
+
+        <div class="rope-return" aria-hidden="true">
+          <span class="rope-return-seg rope-return-seg--drop-r"></span>
+          <span class="rope-return-seg rope-return-seg--bar"></span>
+          <span class="rope-return-seg rope-return-seg--drop-l"></span>
+          <span class="rope-return-port rope-return-port--tr"></span>
+          <span class="rope-return-port rope-return-port--bl"></span>
+          <div class="rope-return-pulse"></div>
+          <div class="node-rope node-rope--mobile" style="--rope-delay:2.4s"></div>
+        </div>
+
+        <article class="auto-card"><span class="idx">NODE 05</span><h3>Job-Complete Auto-Invoice</h3><p>Tech marks the job done on their phone; the invoice and a pay link go out on the spot.</p></article>
+        <div class="node-rope" style="--rope-delay:3.2s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 06</span><h3>Running-Late ETA Notifier</h3><p>The moment a scheduled job slips, the customer gets an updated arrival window automatically.</p></article>
+        <div class="node-rope" style="--rope-delay:4s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 07</span><h3>After-Hours Emergency Triage</h3><p>True no-cooling emergencies reach the on-call tech; everything else lands in the next-morning queue.</p></article>
+        <div class="node-rope" style="--rope-delay:4.8s" aria-hidden="true"></div>
+        <article class="auto-card"><span class="idx">NODE 08</span><h3>Daily KPI Digest</h3><p>Calls, missed calls recovered, jobs booked, revenue — one clean readout on your phone every morning.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps. First week to live.</h2>
+        <p>This really is a sequence — here's exactly what happens after you reach out.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-node">
+          <div class="flow-node__n">01</div>
+          <div><h3>Free walkthrough</h3><p>Fifteen minutes on the phone. We map the repetitive work eating your office and field team's day, and tell you the two or three things worth automating first. No pitch deck, no obligation.</p></div>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-node">
+          <div class="flow-node__n">02</div>
+          <div><h3>We build your system</h3><p>Your own dedicated, hardened server plus every automation — built, loaded with test data, and put through human-reviewed quality control before a single message reaches a real customer.</p></div>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-node">
+          <div class="flow-node__n">03</div>
+          <div><h3>Go live &amp; keep improving</h3><p>Your customized system can be running as early as your first week. We monitor everything, and can build one new high-value automation every month as we learn your business.<span class="same-day">Live customer texting also passes a required U.S. carrier review — we file it the day you sign so it runs in parallel, not after.</span></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSURANCE -->
+  <section class="section" id="assurance">
+    <div class="wrap assure">
+      <div class="reveal">
+        <p class="eyebrow">Why you're in good hands</p>
+        <h2 style="font-size:var(--s-4);margin-top:.5rem;max-width:16ch">We don't cut corners on the things that break trust.</h2>
+      </div>
+      <div class="reveal">
+        <ul class="assure-list">
+          <li><span class="tick">▸</span><span>A <strong>dedicated server for your business only</strong> — not a shared account. Hardened, monitored, no open ports.</span></li>
+          <li><span class="tick">▸</span><span><strong>Encrypted, role-based push notifications</strong> to iOS and Android — the right person gets the alert, not the whole group text.</span></li>
+          <li><span class="tick">▸</span><span><strong>Nothing customer-facing goes out unreviewed.</strong> A human checks the build against real sampled data before it goes live.</span></li>
+          <li><span class="tick">▸</span><span>You keep your phone, your number, and your CRM. We build around what you already run.</span></li>
+        </ul>
+        <p class="assure-note">Right now we're building a full operations system for a <b>two-decade industrial supplier</b>: email triage, purchase-order parsing, quote preparation, shipment tracking, and a morning briefing that tells the owner what needs attention before 7&nbsp;AM. The same toolkit runs an HVAC shop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEES -->
+  <section class="section" id="guarantees">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">Five written guarantees</p>
+        <h2>The risk is ours, not yours</h2>
+        <p>You're trusting a small Phoenix company you just met. These are in writing so that trust isn't a leap.</p>
+      </div>
+      <div class="guar-grid reveal">
+        <div class="guar"><h3><span class="g">G1</span> Fast-Start</h3><p>Your system is built and staged within 7 business days of signing, or that month's retainer is free.</p></div>
+        <div class="guar"><h3><span class="g">G2</span> Recovered-Lead</h3><p>If missed-call recovery doesn't catch at least 10 leads that would've gone to voicemail in your first 30 days, that month's automation work is free.</p></div>
+        <div class="guar"><h3><span class="g">G3</span> 30-Day Refund</h3><p>Unhappy in the first 30 days for any reason — full refund of the setup fee, no questions asked.</p></div>
+        <div class="guar"><h3><span class="g">G4</span> Uptime</h3><p>Downtime on our end that costs you a lead credits that month's retainer back to you.</p></div>
+        <div class="guar"><h3><span class="g">G5</span> No Lock-In</h3><p>Cancel the monthly anytime. No predatory contracts locking you in for months.</p></div>
+        <div class="guar" style="background:linear-gradient(160deg, rgba(139,92,246,.12), var(--surface))"><h3 style="color:var(--accent-2)">Plain terms</h3><p>No long contract. No setup you can't walk away from. We earn the monthly every month.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section class="section" id="founders">
+    <div class="wrap">
+      <div class="founders reveal">
+        <p class="eyebrow">Limited — first 5 shops</p>
+        <h2>Founding HVAC Partner</h2>
+        <p>The first five HVAC companies to sign get more value and <strong>a rate that never moves</strong>:</p>
+        <ul>
+          <li><span class="p">+</span><span>One extra custom automation at setup (six instead of five)</span></li>
+          <li><span class="p">+</span><span>One extra live dashboard</span></li>
+          <li><span class="p">+</span><span>Your monthly rate <strong>locked for life</strong> — later clients pay future price increases as availability lowers.</span></li>
+          <li><span class="p">+</span><span>Setup fee is split in two: half to begin the build, half once it's live and you've seen it work</span></li>
+        </ul>
+        <p class="why">Why only five: every build is done by hand, by our small team of engineers. When the five are placed, the offer closes and standard pricing applies.</p>
+        <div class="hero-cta" style="margin-top:1.6rem">
+          <a class="btn btn--primary" href="#contact">Claim a founding spot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIT -->
+  <section class="section" id="fit">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">Before you reach out</p>
+        <h2>Is this a fit?</h2>
+        <p>We're not for everyone, and a bad fit wastes your time and ours. Here's who this works for.</p>
+      </div>
+      <div class="fit reveal">
+        <div class="fit-col yes">
+          <h3>Good fit</h3>
+          <ul>
+            <li><span class="m">✓</span><span>Established Arizona HVAC company</span></li>
+            <li><span class="m">✓</span><span>3+ field techs, or steady call volume</span></li>
+            <li><span class="m">✓</span><span>Leads slipping through follow-up and you know it</span></li>
+            <li><span class="m">✓</span><span>Want to grow without adding office staff</span></li>
+            <li><span class="m">✓</span><span>Ready to start within the next 30 days</span></li>
+          </ul>
+        </div>
+        <div class="fit-col no">
+          <h3>Not yet</h3>
+          <ul>
+            <li><span class="m">–</span><span>Pre-revenue or no steady call volume</span></li>
+            <li><span class="m">–</span><span>Looking for one single automation, one time</span></li>
+            <li><span class="m">–</span><span>Not ready to change how the office runs</span></li>
+            <li><span class="m">–</span><span>Shopping purely on lowest price</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fit-cta reveal" style="margin-top:1.6rem">If the left column is you — <a href="#contact" style="color:var(--accent-2)">book the walkthrough</a>.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">Get started</p>
+        <h2>Book your free walkthrough</h2>
+        <p>Send this and we reply the same business day — usually much faster. Prefer to talk now? Call or text the number on the right.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div>
+          <form class="form" id="leadForm" novalidate>
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-first-name">First name</label>
+                <input id="f-first-name" name="first_name" type="text" autocomplete="given-name" placeholder="e.g. John" required>
+              </div>
+              <div class="field">
+                <label for="f-last-name">Last name</label>
+                <input id="f-last-name" name="last_name" type="text" autocomplete="family-name" placeholder="e.g. Smith" required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" placeholder="e.g. 480-###-####" title="Enter your 10-digit phone number" required>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="e.g. example@email.com" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="f-techs">How many field techs?</label>
+              <select id="f-techs" name="field_techs" required>
+                <option value="">Select…</option>
+                <option>1–2</option>
+                <option>3–5</option>
+                <option>6–10</option>
+                <option>10+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-bottleneck">What's the biggest bottleneck right now?</label>
+              <textarea id="f-bottleneck" name="bottleneck" placeholder="e.g.&#10;&#10;• Missed calls during AC season&#10;• Quotes never followed up&#10;• No daily reports"></textarea>
+            </div>
+            <div class="field field--consent">
+              <label class="consent-label" for="f-consent">
+                <input type="checkbox" id="f-consent" name="consent" required>
+                <span>I agree to receive calls and texts from Formation Science about my inquiry, by person or automation. Msg &amp; data rates may apply. Reply STOP to opt out at any time.</span>
+              </label>
+              <input type="hidden" name="consent_text" value="I agree to receive calls and texts from Formation Science about my inquiry, by person or automation. Msg &amp; data rates may apply. Reply STOP to opt out at any time.">
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" data-label="Send my walkthrough request">Send my walkthrough request</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact-side">
+          <h3>Talk to us now</h3>
+          <div class="contact-line"><span><span class="glow-purple">Call</span> or <span class="glow-purple">Text</span></span><a href="tel:+14805608041">(480) 560-8041</a></div>
+          <div class="contact-line"><span>Email</span><a href="mailto:hello@formationscience.com">hello@formationscience.com</a></div>
+          <div class="contact-actions">
+            <a class="btn btn--mono btn--sm" href="tel:+14805608041">Call</a>
+            <a class="btn btn--mono btn--sm" href="sms:+14805608041">Text</a>
+            <a class="btn btn--mono btn--sm" href="mailto:hello@formationscience.com">Email</a>
+          </div>
+          <div>
+            <h3 style="margin-bottom:.5rem">Based in Phoenix</h3>
+            <address>
+              Formation Science<br>
+              4539 N 22nd St, Ste 7030<br>
+              Phoenix, AZ 85016
+            </address>
+          </div>
+          <p class="same-day">Serving HVAC contractors across the Phoenix metro — Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, Peoria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">Questions</p>
+        <h2>Straight answers</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>"We already pay someone for marketing and our website." <span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faq-body">This isn't marketing and it doesn't compete with your lead generation. It makes sure the leads you already pay for truly stay yours.</div>
+        </details>
+        <details>
+          <summary>"We're not technical." <span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faq-body">You don't touch anything. You keep your phone, your number, and your CRM. We build and run the system; you get notifications and a dashboard. Onboarding includes one short call where we set everything up with you.</div>
+        </details>
+        <details>
+          <summary>"Is our customer data safe?" <span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Your own dedicated server — hardened, monitored, no shared access and no open ports. Nothing customer-facing is sent without a human review first. We DO NOT cut corners around security.</div>
+        </details>
+        <details>
+          <summary>"What if it doesn't work?" <span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Five written guarantees, including a 30-day unconditional refund of the setup fee and cancel-the-monthly-anytime with everything built staying yours. If missed-call recovery misses its target in your first 30 days, that month's work is free.</div>
+        </details>
+        <details>
+          <summary>"Do we need new phones or software?" <span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faq-body">No. We integrate with what you already run — your CRM, QuickBooks, Stripe, Slack, and more. Your published business number stays exactly as it is.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo">
+        <svg viewBox="0 0 250 152" fill="none" aria-hidden="true" style="width:26px"><g stroke="currentColor" stroke-width="15" stroke-linecap="round">
+          <path d="M7 16 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 232 16"/><path d="M7 40 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 232 40"/>
+          <path d="M7 64 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 150 64"/><path d="M7 88 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 150 88"/>
+          <path d="M7 112 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 74 112"/><path d="M7 136 c 12 -9 24 -9 36 0 c 12 9 24 9 36 0 L 74 136"/>
+        </g></svg>
+        <span>Formation<span class="logo__sci">Science</span></span>
+      </span>
+      <p>Business operation automation for HVAC contractors. Built and run from Phoenix, Arizona.</p>
+      <address>4539 N 22nd St, Ste 7030 · Phoenix, AZ 85016 · <a href="tel:+14805608041" style="color:inherit">(480) 560-8041</a> · <a href="mailto:hello@formationscience.com" style="color:inherit">hello@formationscience.com</a></address>
+    </div>
+    <div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#automate">Automations</a>
+        <a href="#how">How it works</a>
+        <a href="#guarantees">Guarantees</a>
+        <a href="#faq">FAQ</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+    <p class="foot-legal">© <span id="yr">2026</span> Formation Science LLC · Phoenix, Arizona · All rights reserved.</p>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick contact">
+  <a href="tel:+14805608041">Call</a>
+  <a href="sms:+14805608041">Text</a>
+  <a class="cta" href="#contact">Walkthrough</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var yr = document.getElementById("yr");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  var head = document.querySelector(".site-head");
+  var onScroll = function(){ head.classList.toggle("is-stuck", window.scrollY > 8); };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive:true });
+
+  /* scroll-spy: highlight whichever section's nav link matches what's
+     currently in view, with a smooth sliding underline (see .head-nav a::after) */
+  var navLinks = [].slice.call(document.querySelectorAll('.head-nav a[href^="#"]'));
+  if (navLinks.length && "IntersectionObserver" in window){
+    var linkFor = {};
+    var watchedSections = [];
+    navLinks.forEach(function(link){
+      var id = link.getAttribute("href").slice(1);
+      var section = document.getElementById(id);
+      if (section){ linkFor[id] = link; watchedSections.push(section); }
+    });
+    var setActive = function(id){
+      navLinks.forEach(function(l){ l.classList.remove("is-active"); });
+      if (linkFor[id]) linkFor[id].classList.add("is-active");
+    };
+    var navIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+    watchedSections.forEach(function(s){ navIO.observe(s); });
+  }
+
+  /* phone field: live-format to (###) ### - #### as the user types or pastes.
+     Pulls out digits only (so pasting "(480) 242-1234" or "480.242.1234"
+     both work identically), caps at 10, and rebuilds the display value on
+     every keystroke - same accepted tradeoff as the lead-submission form's
+     phone formatter elsewhere in this project: the cursor jumps to the end
+     on every keystroke rather than preserving its exact position, which is
+     fine since phone numbers are almost always typed left-to-right, not
+     edited mid-string. Native validation (required + custom validity below)
+     checks the actual digit count, not the punctuated display string. */
+  var phoneInput = document.getElementById("f-phone");
+  if (phoneInput){
+    var formatPhoneDisplay = function(digits){
+      var area = digits.slice(0, 3);
+      var prefix = digits.slice(3, 6);
+      var line = digits.slice(6, 10);
+      if (digits.length === 0) return "";
+      if (digits.length <= 2) return "(" + area;
+      if (digits.length <= 6) return "(" + area + ")" + (prefix ? " " + prefix : "");
+      return "(" + area + ") " + prefix + " - " + line;
+    };
+    var syncPhoneValidity = function(digitCount){
+      phoneInput.setCustomValidity(digitCount === 10 ? "" : "Enter a complete 10-digit phone number.");
+    };
+    phoneInput.addEventListener("input", function(){
+      var digits = phoneInput.value.replace(/[^0-9]/g, "").slice(0, 10);
+      phoneInput.value = formatPhoneDisplay(digits);
+      syncPhoneValidity(digits.length);
+    });
+    syncPhoneValidity(0);
+  }
+
+  var reveals = document.querySelectorAll(".reveal");
+  if (!reduce && "IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin:"0px 0px -10% 0px", threshold:0.06 });
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  var form = document.getElementById("leadForm");
+  var status = document.getElementById("formStatus");
+  if (form){
+    // Temporary, no-server backend: submits straight to a Google Form via a
+    // hidden iframe. A <form target="hidden-iframe"> POST is a plain browser
+    // navigation, not a fetch() call, so it never triggers the CORS block
+    // that stops JS from reading Google's response - the tradeoff is this
+    // technique can't confirm success either, it can only fire the request.
+    // Meant to be swapped for a real backend (Supabase+RLS, or n8n once a
+    // VPS is actually running) once that's worth it - nothing about the
+    // visible form/fields needs to change then, just this handler.
+    var GOOGLE_FORM_ACTION = "REPLACE_WITH_YOUR_GOOGLE_FORM_FORMRESPONSE_URL";
+    // Map each of our field names to that question's entry.NNNNNN ID from
+    // the real Google Form - see the setup steps below for how to find them.
+    var GOOGLE_FORM_ENTRIES = {
+      first_name: "REPLACE_WITH_ENTRY_ID",
+      last_name: "REPLACE_WITH_ENTRY_ID",
+      company: "REPLACE_WITH_ENTRY_ID",
+      phone: "REPLACE_WITH_ENTRY_ID",
+      email: "REPLACE_WITH_ENTRY_ID",
+      field_techs: "REPLACE_WITH_ENTRY_ID",
+      bottleneck: "REPLACE_WITH_ENTRY_ID",
+      consent: "REPLACE_WITH_ENTRY_ID",
+      consent_text: "REPLACE_WITH_ENTRY_ID"
+    };
+    var googleFormConfigured = GOOGLE_FORM_ACTION.indexOf("REPLACE_WITH") === -1;
+
+    var mailtoFallback = function(){
+      var g = function(n){ var el = form.elements[n]; return el ? el.value.trim() : ""; };
+      var body = [
+        "Name: " + g("first_name") + " " + g("last_name"),
+        "Company: " + g("company"),
+        "Phone: " + g("phone"),
+        "Email: " + g("email"),
+        "Field techs: " + g("field_techs"),
+        "",
+        "Biggest bottleneck:",
+        g("bottleneck")
+      ].join("\n");
+      window.location.href = "mailto:sales@formationscience.com"
+        + "?subject=" + encodeURIComponent("HVAC walkthrough request")
+        + "&body=" + encodeURIComponent(body);
+    };
+
+    var IFRAME_NAME = "gform-target";
+    var getHiddenIframe = function(){
+      var el = document.getElementsByName(IFRAME_NAME)[0];
+      if (!el){
+        el = document.createElement("iframe");
+        el.name = IFRAME_NAME;
+        el.style.display = "none";
+        el.setAttribute("aria-hidden", "true");
+        document.body.appendChild(el);
+      }
+      return el;
+    };
+
+    var submitToGoogleForm = function(values){
+      getHiddenIframe();
+      var gform = document.createElement("form");
+      gform.action = GOOGLE_FORM_ACTION;
+      gform.method = "POST";
+      gform.target = IFRAME_NAME;
+      gform.style.display = "none";
+      Object.keys(GOOGLE_FORM_ENTRIES).forEach(function(key){
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = GOOGLE_FORM_ENTRIES[key];
+        input.value = values[key];
+        gform.appendChild(input);
+      });
+      document.body.appendChild(gform);
+      gform.submit();
+      setTimeout(function(){ gform.remove(); }, 3000);
+    };
+
+    form.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      if (!form.checkValidity()){ form.reportValidity(); return; }
+      var btn = form.querySelector('button[type="submit"]');
+
+      if (!googleFormConfigured){
+        status.textContent = "Opening your email app…";
+        status.classList.remove("err");
+        mailtoFallback();
+        return;
+      }
+
+      // Bot check happens here instead of server-side (there's no server):
+      // a filled honeypot just quietly no-ops instead of submitting, without
+      // tipping the bot off that it was caught.
+      if (form.elements.botcheck.checked){
+        var fake = document.createElement("div");
+        fake.className = "form-done";
+        fake.innerHTML = "<h3>Got it.</h3><p>We'll reply the same business day.</p>";
+        form.replaceWith(fake);
+        return;
+      }
+
+      btn.disabled = true;
+      var label = btn.getAttribute("data-label");
+      btn.textContent = "Sending…";
+      status.textContent = "";
+      status.classList.remove("err");
+
+      submitToGoogleForm({
+        first_name: form.elements.first_name.value.trim(),
+        last_name: form.elements.last_name.value.trim(),
+        company: form.elements.company.value.trim(),
+        phone: form.elements.phone.value.replace(/[^0-9]/g, ""),
+        email: form.elements.email.value.trim(),
+        field_techs: form.elements.field_techs.value,
+        bottleneck: form.elements.bottleneck.value.trim(),
+        consent: form.elements.consent.checked ? "Yes" : "No",
+        consent_text: form.elements.consent_text.value
+      });
+
+      // A cross-origin hidden iframe can't tell us whether Google actually
+      // accepted the submission, so this is optimistic by design - the
+      // HTML5 validation above (required fields, 10-digit phone, email type)
+      // already stops the vast majority of anything Google would reject.
+      setTimeout(function(){
+        var done = document.createElement("div");
+        done.className = "form-done";
+        done.setAttribute("role","status");
+        done.innerHTML = "<h3>Got it.</h3><p>We'll reply the same business day — usually much faster. Prefer to talk now? Call or text <a href='tel:+14805608041' style='color:var(--accent-2)'>(480)&nbsp;560-8041</a>.</p>";
+        form.replaceWith(done);
+      }, 700);
+    });
+  }
+})();
+</script>
+</body>
+</html>
