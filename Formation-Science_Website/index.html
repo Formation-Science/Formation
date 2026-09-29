@@ -1074,19 +1074,19 @@ address{font-style:normal;font-family:var(--ff-mono);font-size:.88rem;color:var(
     // Meant to be swapped for a real backend (Supabase+RLS, or n8n once a
     // VPS is actually running) once that's worth it - nothing about the
     // visible form/fields needs to change then, just this handler.
-    var GOOGLE_FORM_ACTION = "REPLACE_WITH_YOUR_GOOGLE_FORM_FORMRESPONSE_URL";
+    var GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSds65CKygTrZmXv8lvPxAk-tYa_ua63DnCYHtTGK7Ao5H_X4g/formResponse";
     // Map each of our field names to that question's entry.NNNNNN ID from
     // the real Google Form - see the setup steps below for how to find them.
     var GOOGLE_FORM_ENTRIES = {
-      first_name: "REPLACE_WITH_ENTRY_ID",
-      last_name: "REPLACE_WITH_ENTRY_ID",
-      company: "REPLACE_WITH_ENTRY_ID",
-      phone: "REPLACE_WITH_ENTRY_ID",
-      email: "REPLACE_WITH_ENTRY_ID",
-      field_techs: "REPLACE_WITH_ENTRY_ID",
-      bottleneck: "REPLACE_WITH_ENTRY_ID",
-      consent: "REPLACE_WITH_ENTRY_ID",
-      consent_text: "REPLACE_WITH_ENTRY_ID"
+      first_name: "entry.1517660653",
+      last_name: "entry.805570017",
+      company: "entry.1226677809",
+      phone: "entry.410160786",
+      email: "entry.829127432",
+      field_techs: "entry.873274343",
+      bottleneck: "entry.1308936817",
+      consent: "entry.1708995901",
+      consent_text: "entry.1222156053"
     };
     var googleFormConfigured = GOOGLE_FORM_ACTION.indexOf("REPLACE_WITH") === -1;
 
