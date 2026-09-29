@@ -455,10 +455,17 @@ p{text-wrap:pretty}
 .form-status.err{color:var(--accent-2)}
 .form-done{
   border:1.5px solid var(--accent);border-radius:var(--radius);
-  background:linear-gradient(160deg, rgba(139,92,246,.1), var(--surface) 55%);padding:1.5rem
+  background:linear-gradient(160deg, rgba(139,92,246,.1), var(--surface) 55%);padding:1.5rem;
+  box-shadow:0 18px 40px -18px rgba(139,92,246,.55);
+  animation:form-done-hover 3.6s ease-in-out infinite;
 }
 .form-done h3{font-size:1.15rem;font-family:var(--ff-display)}
 .form-done p{color:var(--ink-soft);margin-top:.6rem;font-size:.96rem}
+@keyframes form-done-hover{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+@media (prefers-reduced-motion:reduce){.form-done{animation:none}}
 
 .contact-side{display:grid;gap:1.3rem;align-content:start}
 .contact-side h3{font-size:1.05rem;font-weight:700;font-family:var(--ff-display)}
@@ -1157,7 +1164,7 @@ address{font-style:normal;font-family:var(--ff-mono);font-size:.88rem;color:var(
       if (form.elements.botcheck.checked){
         var fake = document.createElement("div");
         fake.className = "form-done";
-        fake.innerHTML = "<h3>Got it.</h3><p>We'll reply the same business day.</p>";
+        fake.innerHTML = "<h3>We'll be in touch shortly.</h3>";
         form.replaceWith(fake);
         return;
       }
@@ -1188,7 +1195,7 @@ address{font-style:normal;font-family:var(--ff-mono);font-size:.88rem;color:var(
         var done = document.createElement("div");
         done.className = "form-done";
         done.setAttribute("role","status");
-        done.innerHTML = "<h3>Got it.</h3><p>We'll reply the same business day — usually much faster. Prefer to talk now? Call or text <a href='tel:+14805608041' style='color:var(--accent-2)'>(480)&nbsp;560-8041</a>.</p>";
+        done.innerHTML = "<h3>We'll be in touch shortly.</h3><p>Prefer to talk now? Call or text <a href='tel:+14805608041' style='color:var(--accent-2)'>(480)&nbsp;560-8041</a>.</p>";
         form.replaceWith(done);
       }, 700);
     });
