@@ -4,15 +4,51 @@ Same business, same offers, same contact info as `Test_Website/` — a completel
 different visual direction. Static HTML/CSS/JS, no build step, one file per page.
 
 ```
-Test_Website_V2/
-├── index.html            # the landing page (all CSS + JS inline)
-├── favicon.svg           # tab icon (violet F-mark on near-black)
+Formation-Science_Website/
+├── index.html                       # the landing page (all CSS + JS inline)
 ├── assets/
-│   └── logo-mark.svg     # standalone logo mark, currentColor
+│   ├── formation-full-logo-white.png   # icon + wordmark, for dark backgrounds (header, footer)
+│   ├── formation-full-logo-black.png   # icon + wordmark, for light backgrounds
+│   ├── formation-icon-mark-white.png   # icon only, for dark backgrounds
+│   ├── formation-icon-mark-black.png   # icon only, for light backgrounds
+│   ├── favicon-16.png / favicon-32.png / favicon-512.png  # tab icon (generated from the icon mark)
+│   └── apple-touch-icon.png            # iOS home-screen icon (180×180, generated from the icon mark)
 ├── privacy/index.html    # /privacy/  — EXAMPLE draft, needs a lawyer
 ├── terms/index.html      # /terms/    — EXAMPLE draft, needs a lawyer
 └── README.md
 ```
+
+## Brand assets (2026-09-22)
+
+The real Formation Science logo — designed by the client's graphics
+designer, delivered in `Formation_Science/Marketing/Logos_0.5x|1x|2x/` — has
+replaced the original placeholder wave-mark used while the site was in
+early concept. Source files for all four PNGs above live in the `2x` export
+set (`Marketing/Logos_2x/2x/FORMATION ICON MARK_*` and
+`FORMATION FULL_LOGO_*`); that resolution was used directly for both the
+`assets/` copies and the favicon generation, since it's high enough
+resolution to downscale cleanly for every size this site actually displays
+(nav logo ~140px wide, footer ~125px wide) — no need to juggle multiple
+source sizes for a flat, sharp-edged mark like this one.
+
+- **Where the WHITE variant is used**: header nav, footer, and favicon/
+  apple-touch-icon — all dark backgrounds (`--void`), so white keeps
+  contrast.
+- **Where BLACK would be used instead**: nothing on this site right now —
+  every current placement sits on a dark surface. Kept on hand in `assets/`
+  for anything printed or displayed on a light background later (email
+  signature, printed materials, a future light-mode section).
+- The favicon/apple-touch-icon PNGs aren't just a resized icon mark on
+  transparency — they're the WHITE icon mark composited onto a solid
+  `--void` (#08050F) square. That matches how the original placeholder
+  favicon worked and matters for a practical reason: browser tab bars and
+  iOS home screens can be light OR dark depending on the user's system
+  theme, and a transparent icon would lose contrast on whichever one it
+  lands on. Baking in the dark background guarantees the mark reads
+  correctly either way.
+- The old hand-drawn placeholder mark (`favicon.svg`, `assets/logo-mark.svg`,
+  and the inline `<svg>` wave paths previously in the header/footer) has
+  been deleted — nothing references it anymore.
 
 ## The concept
 
